@@ -25,6 +25,7 @@
       <br>
       <div class="col">
         <button type="submit" class="btn btn-primary"  
+        :class="{disabled: isDisabledAddBtn}"
         v-bind:disabled="isDisabledAddBtn"
         v-on:click.prevent="addNewUser"        
         >Add User</button>
@@ -119,5 +120,7 @@ export default {
 </script>
 
 <style scoped>
-
+ .disabled{
+   background-color: grey;
+ }
 </style>
